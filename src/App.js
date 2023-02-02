@@ -22,7 +22,6 @@ function App() {
     <Router>
       <div className="goth">     
         <LengNav></LengNav>
-      </div>
       <Routes>
         <Route path="/" element={<HomePage></HomePage>} />
         <Route path='/characters' element={<Characters/>}/>
@@ -31,6 +30,7 @@ function App() {
         <Route path='/house/:name' element={<House/>}/>
         <Route path='/chronologic' element={<Chronologic/>}/>
       </Routes>
+      </div>
             
       
     </Router>
