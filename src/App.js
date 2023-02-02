@@ -1,23 +1,43 @@
-import logo from './logo.svg';
+
+// import { useTranslation } from 'react-i18next';
+import { Route, Routes, useLocation } from "react-router-dom";
+import LengNav from './components/LengNav/LengNav';
 import './App.css';
 
+import HomePage from './pages/HomePage/HomePage';
+import Characters from './pages/Characters/Characters';
+import Character from './pages/Character/Character';
+import Houses from './pages/House/House';
+import House from './pages/House/House';
+import Chronologic from './pages/Chronologic/Chronologic';
+
+
 function App() {
+  // const {t, i18n} = useTranslation(['translation']);
+  // const setLanguage = (code) => {
+  //   i18n.changeLanguage(code);
+  // }
+  let location = useLocation();
+  console.log(location.pathname);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className= {location.pathname === '/' ? 'home': 'others'}>
+    
+      
+          <div className="goth" >     
+                  <LengNav></LengNav>
+          </div>
+        <Routes>
+          <Route path="/" element={<HomePage></HomePage>} />
+          <Route path='/characters' element={<Characters/>}/>
+          <Route path='/character/:name' element={<Character/>}/>
+          <Route path='/houses' element={<Houses/>}/>
+          <Route path='/house/:name' element={<House/>}/>
+          <Route path='/chronologic' element={<Chronologic/>}/>
+        </Routes>
+              
+        
+      
     </div>
   );
 }
