@@ -1,8 +1,17 @@
 .lengNav{
+    width: 100%;
+    height: 10%;  
+    background-color:transparent;
     position: absolute;
-    top: 0;
-    left: 500;
+    top: 50;
+    left:0;
     z-index:3;
+
+    &__link{
+        color:rgb(126, 126, 126);
+        z-index:99;
+    }   
+
    
 }
 
@@ -22,4 +31,5 @@
         text-align: center;
         font-size: 40px;
     }
+
 }
