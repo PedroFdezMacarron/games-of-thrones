@@ -2,3 +2,15 @@
   font-family: 'JuegoTronos';
   src: url('./assets/Game\ of\ Thrones.ttf');
 }
+
+.home{
+  background-image: url(./assets/BackHomeImg.png);
+  min-height: 100vh;
+  color: white;
+}
+
+.others{
+  background-color: black;
+  min-height: 100vh;
+  color: white;
+}
