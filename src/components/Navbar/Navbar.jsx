@@ -15,6 +15,7 @@ export default function Navbar() {
     return(
         
         <div className='nabvar'>
+
             <Link className='nabvar-links' to="/characters">{t('Characters')}</Link>
             <Link className='nabvar-links' to="/houses">{t('Houses')}</Link>
             <Link className='nabvar-links' to="/chronologic">{t('chronology')}</Link>

@@ -1,6 +1,10 @@
 .background{
     // background-image: url(../../assets/BackHomeImg.png);
-    font-family: 'JuegoTronos';
+
+    font-family: 'JuegoTronos'; 
+    min-height: 100vh;
+    background-position:center;
+    background-repeat:no-repeat;
     display: flex;
     justify-content: center;
     
@@ -16,6 +20,7 @@
 
 .Games-of-Thrones{
     color: white;
+
     font-size: 135px;
     
 }

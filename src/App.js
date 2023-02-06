@@ -16,6 +16,7 @@ import { useTranslation } from 'react-i18next';
 import Navbar from "./components/Navbar/Navbar";
 
 
+
 // import { Link } from "react-router-dom";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
   return (
 
     <div className= {location.pathname === '/' ? 'home': 'others'}>
+
     {/* <Link className={home.pathname === '/' ? 'home' : 'others'}> */}
 
     <MyContext.Provider value={{number, setNumber, number2, setNumber2, t, changeLanguaje}}>
@@ -50,6 +52,7 @@ function App() {
           <Route path='/house/:name' element={<House/>}/>
           <Route path='/chronologic' element={<Chronologic/>}/>
         </Routes>
+
 
       <Navbar></Navbar>
       </MyContext.Provider>
