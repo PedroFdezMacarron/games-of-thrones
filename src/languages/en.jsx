@@ -7,4 +7,16 @@ export const en = {
     "Games of Thrones": "Games of Thrones",
     "words":"words",
     "seat":"seat",
+    "region":"region",
+    "allegiance":"allegiance",
+    "religions":"religions",
+    "fundation":"fundation",
+    "house":"house",
+    "appearances":"appearances",
+    "father":"father",
+    "siblings":"siblings",
+    "titles":"titles",
+    "← return":"← return",
+    "Search...":"Search..."
+
 }

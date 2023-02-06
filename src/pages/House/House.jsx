@@ -1,8 +1,11 @@
 import axios from "axios";
 import "./House.scss";
 import { useNavigate, useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import {  useContext, useEffect, useState } from "react";
 import DetailHouse from "./components/DetailHouse";
+import { MyContext } from "../../context/MyContext";
+
+
 
 let details = [
   {
@@ -11,13 +14,19 @@ let details = [
   },
 ];
 
+
+
 export default function House() {
   const name = useParams().name; 
   const navigate = useNavigate();
 
+  
+
+
   // variable de estado
   const [houseData, setHouse] = useState({});
   const [logo, setLogo] = useState({});
+  const {t} = useContext(MyContext);
   let fName;
 
   // función para recoger los detalles de la casa y la imagen de otra url
@@ -82,10 +91,14 @@ export default function House() {
 
   };
 
+
+
   useEffect(() => {
     details.length = 0;
     getHouse();
   }, []);
+
+
 
   const previousPage = () => {
     navigate(-1);
@@ -94,8 +107,9 @@ export default function House() {
   return (
     <div className="character">
       <div onClick={previousPage} className="previousPage">
-        ← volver
+        {t('← return')}
       </div>      
+  
       <img className="character__img" src={logo}  alt={houseData.name} ></img>
 
       <div className="character__name">{houseData.name}</div>
