@@ -1,0 +1,29 @@
+.detail {
+  display: flex;
+  flex-direction: column;
+}
+.detail__title {
+  font-size: 15px;
+  font-weight: 200;
+  width: 248;
+  width: 248px;
+  height: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+}
+.detail__items {
+  text-align: center;
+  width: 248px;
+  margin: 1px 0 0;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}/*# sourceMappingURL=Detail.css.map */
