@@ -20,11 +20,18 @@
 .languages{
     display: flex;
     justify-content: flex-end;
-    padding: 20px 100px;
+    // padding: 20px 100px;
     align-items: center;
+    height: 15vh;
 }
 
 .leng{
+    margin: 20px;
+    width: 40px;
+    padding-right: 60px;
+}
+
+.spain{
     margin: 20px;
     width: 40px;
 }

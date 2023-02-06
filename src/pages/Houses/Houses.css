@@ -1,1 +1,9 @@
-/*# sourceMappingURL=Houses.css.map */
+.houses-gallery__container {
+  font-family: GoT;
+  font-weight: lighter;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0 10%;
+  justify-content: center;
+}/*# sourceMappingURL=Houses.css.map */

@@ -1,6 +1,6 @@
 
-// import Navbar from "../../components/Navbar/Navbar";
-import "./HomePage.scss";
+
+import "./HomePage.css";
 import React, { useContext } from "react";
 import { MyContext } from "../../context/MyContext";
 import Navbar from "../../components/Navbar/Navbar";
@@ -18,8 +18,7 @@ export default function HomePage() {
                 </div>
                 <div className="navbardown">
                   <Navbar></Navbar>  
-                </div> 
-              
+                </div>
         </div>
        
     )

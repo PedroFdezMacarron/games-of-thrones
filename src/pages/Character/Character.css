@@ -1,26 +1,23 @@
 .character {
   width: 100%;
-  min-height: 100vh;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
+  height: -webkit-calc(100% - 165px);
   color: white;
   background-color: #000000;
-  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .character__img {
-  width: 248px;
-  height: 320px;
+  height: 290px;
+  height: 35vh;
   -o-object-fit: scale-down;
      object-fit: scale-down;
+  padding-top: 60px;
 }
 .character__name {
-  margin-top: 30px;
-  margin-bottom: 52px;
-  font-size: 36px;
+  padding-top: 20px;
+  padding-bottom: 32px;
+  font-size: 30px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -29,7 +26,22 @@
 }
 .character__details {
   display: flex;
-  padding-left: 156;
-  padding-right: 156;
+  flex-wrap: wrap;
   align-content: space-around;
+}
+
+.previousPage {
+  font-family: Lato;
+  font-size: 20px;
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  z-index: 999;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.hidden {
+  font-family: Lato;
+  font-size: 10px;
 }/*# sourceMappingURL=Character.css.map */
