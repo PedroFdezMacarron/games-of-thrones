@@ -1,0 +1,9 @@
+.nabvar {
+  display: flex;
+}
+.nabvar-links {
+  color: white;
+  text-decoration: none;
+  margin: 0pc 50px 0px 50px;
+  font-size: 30px;
+}/*# sourceMappingURL=Navbar.css.map */

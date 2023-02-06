@@ -1,17 +1,27 @@
 
-import Navbar from "../../components/Navbar/Navbar";
+// import Navbar from "../../components/Navbar/Navbar";
 import "./HomePage.scss";
+import React, { useContext } from "react";
+import { MyContext } from "../../context/MyContext";
+import Navbar from "../../components/Navbar/Navbar";
 
 
 export default function HomePage() {
-
+    const {t} = useContext(MyContext);
     return(
+    
         <div className="background">
-            <div className="title">
-                <span className="Games-of-Thrones">Games of Thrones</span>
-            </div>
-            <Navbar></Navbar>
+
+            
+                <div className="games-title">
+                   <span className="Games-of-Thrones">{t('Games of Thrones')}</span> 
+                </div>
+                <div className="navbardown">
+                  <Navbar></Navbar>  
+                </div> 
+              
         </div>
+       
     )
 
 }

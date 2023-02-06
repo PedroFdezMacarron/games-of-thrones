@@ -7,6 +7,12 @@
   background-image: url(./assets/BackHomeImg.png);
   min-height: 100vh;
   color: white;
+
+  background-repeat: no-repeat;
+  min-width: 100vh;
+  background-position: center;
+  background-size: 100% 100%;
+
 }
 
 .others{
