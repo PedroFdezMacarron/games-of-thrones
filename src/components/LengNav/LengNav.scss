@@ -1,7 +1,28 @@
 .lengNav{
+    width: 100%;
+    height: 10%;  
+    background-color:transparent;
     position: absolute;
-    top: 0;
-    left: 500;
+    top: 50;
+    left:0;
     z-index:3;
-    
+
+    &__link{
+        color:rgb(126, 126, 126);
+        z-index:99;
+    }   
+
+   
+}
+
+.languages{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 100px;
+    align-items: center;
+}
+
+.leng{
+    margin: 20px;
+    width: 40px;
 }
