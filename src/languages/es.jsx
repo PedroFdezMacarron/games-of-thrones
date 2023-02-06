@@ -4,6 +4,7 @@ export const es = {
     "Characters": "Personajes",
     "Houses": "Casas",
     "chronology": "Cronologia",
-    "Games of Thrones": "Juego de tronos"
-    
+    "Games of Thrones": "Juego de tronos",
+    "words":"lema",
+    "seat":"sede",
 }
