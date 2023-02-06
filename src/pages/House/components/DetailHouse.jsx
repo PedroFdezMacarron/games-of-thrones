@@ -1,11 +1,17 @@
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 import "./DetailHouse.scss";
+import { MyContext } from '../../../context/MyContext'
+import { useContext } from 'react';
+
+  
 export default function Detail({details}) {  
   
+  const {t} = useContext(MyContext);
+
   return (
     <div className="detail">
-      <div className="detail__title">{details.title}</div>      
+      <div className="detail__title">{t(details.title)}</div>      
 
       <SimpleBar style={{ height: '30vh' , colorbar:'#FFFF' }}>  
 
