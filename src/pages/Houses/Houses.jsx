@@ -36,7 +36,7 @@ export const Houses = () => {
   };
 
   return (
-    <>
+    <div className="div-houses">
        
       <HousesSearcher setSearch={searchHouses} />
       <main className="home__container noimage__container">
@@ -53,7 +53,7 @@ export const Houses = () => {
         </SimpleBar>
       </main>
         <Navbar></Navbar>
-    </>
+    </div>
   );
 };
 

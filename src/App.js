@@ -19,8 +19,6 @@ import Navbar from "./components/Navbar/Navbar";
 
 
 
-// import { Link } from "react-router-dom";
-
 function App() {
   const {t, i18n} = useTranslation(['translation']);
 
@@ -33,21 +31,20 @@ function App() {
   let location = useLocation();
   console.log(location.pathname);
 
-  // let home = useLocation();
-  // console.log(home.pathname);
+  
   return (
 
     <div className= {location.pathname === '/' ? 'home': 'others'}>
 
-    {/* <Link className={home.pathname === '/' ? 'home' : 'others'}> */}
+    
 
-    <MyContext.Provider value={{number, setNumber, number2, setNumber2, t, changeLanguaje}}>
+    <MyContext.Provider value={{number, setNumber, number2, setNumber2, t, changeLanguaje, location}}>
           <div className="goth" >     
                   <LengNav></LengNav>
           </div>   
           
         <Routes>
-          <Route path="/" element={<HomePage></HomePage>} />
+          <Route path="/" element={<HomePage></HomePage>}/>
           <Route path='/characters' element={<Characters/>}/>
           <Route path='/character/:name' element={<Character/>}/>
           <Route path='/houses' element={<Houses/>}/>
@@ -57,9 +54,9 @@ function App() {
 
 
 
-      <Navbar></Navbar>
+      {(location.pathname === "/" || location.pathname === "/characters" || location.pathname === "/houses"  || location.pathname === "/chronologic") && <Navbar></Navbar>}
       </MyContext.Provider>
-    {/* </Link> */}
+    
     </div>
     
 

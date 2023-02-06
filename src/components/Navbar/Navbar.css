@@ -1,9 +1,25 @@
 .nabvar {
   display: flex;
+  z-index: 999;
+  justify-content: space-between;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  height: 50px;
+  
 }
 .nabvar-links {
   color: white;
   text-decoration: none;
   margin: 0pc 50px 0px 50px;
-  font-size: 30px;
-}/*# sourceMappingURL=Navbar.css.map */
+  font-size: 25px;
+}
+
+.nabvar-links.active{
+  
+  text-decoration: underline;
+  
+  
+}
+

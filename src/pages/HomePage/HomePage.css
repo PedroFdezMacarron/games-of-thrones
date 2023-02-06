@@ -1,27 +1,18 @@
 .background {
   font-family: "JuegoTronos";
-  min-height: 100vh;
+  /* height: 500px; */
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-  position: absolute;
-  top: 0;
-  left: 0;
+  justify-content: center;
 }
 
-.title {
-  font-family: "JuegoTronos";
-  font-size: 130px;
-  display: flex;
-  width: 70%;
-  justify-content: center;
-  color: white;
+.games-title {
+  text-align: center;
+  margin-top: 100px;
 }
 
 .Games-of-Thrones {
   color: white;
-}/*# sourceMappingURL=HomePage.css.map */
+  font-size: 135px;
+}

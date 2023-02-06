@@ -6,15 +6,22 @@
 .b-searcher__houses{
     
     color: #fff;
-    background-color: #000;
+    background-color: rgb(195, 18, 18);
     outline: none;
     border: none;
     border-bottom: solid 2px #fff;
     padding: 5px 10px;
     font-size: 15px;
     width: 500px;
+    background-image: url('public/search.svg');
+    background-size: 10px 10px;
 
 
+}
+
+
+.b-icon__searcher{
+    width: 21px;
 }
 
 

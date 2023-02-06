@@ -1,0 +1,43 @@
+.b-father__characters {
+  display: flex;
+  overflow: hidden;
+  align-content: flex-start;
+}
+
+.b-character__card {
+  background-color: rgb(107, 107, 21);
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.b-character__img {
+  height: 20vh;
+}
+
+.b-character-name {
+  text-align: center;
+}
+
+.b-father__characters:hover .b-character-container {
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.b-character-container {
+  width: 100%;
+  bottom: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-family: GoT;
+  visibility: hidden;
+}
+
+.b-character-name {
+  text-align: center;
+}/*# sourceMappingURL=CharacterGallery.css.map */
