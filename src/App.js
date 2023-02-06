@@ -7,9 +7,10 @@ import './App.css';
 import HomePage from './pages/HomePage/HomePage';
 import Characters from './pages/Characters/Characters';
 import Character from './pages/Character/Character';
-import Houses from './pages/House/House';
+import Houses from './pages/Houses/Houses';
 import House from './pages/House/House';
 import Chronologic from './pages/Chronologic/Chronologic';
+// import Navbar from "./components/Navbar/Navbar";
 
 
 function App() {
@@ -36,6 +37,8 @@ function App() {
           <Route path='/house/:name' element={<House/>}/>
           <Route path='/chronologic' element={<Chronologic/>}/>
         </Routes>
+
+ 
               
         
       
