@@ -10,16 +10,13 @@
   align-items: center;
 
   &__img {
-    // width: 228px;
     height: 290px;
     height: 35vh;
     object-fit: scale-down;
-    padding-top: 0;
-   
+    padding-top: 0;   
   }
 
-  &__name {
- 
+  &__name { 
     padding-top: 20px;
     padding-bottom: 32px;
     font-size: 30px;

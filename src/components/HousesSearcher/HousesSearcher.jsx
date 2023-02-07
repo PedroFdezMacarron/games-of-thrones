@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { MyContext } from '../../context/MyContext'
-import './HousesSearcher.css'
+import './HousesSearcher.scss'
 
 
 export const HousesSearcher = ({setSearch}) => {
