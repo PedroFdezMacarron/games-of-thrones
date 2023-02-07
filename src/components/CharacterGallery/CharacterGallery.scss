@@ -9,22 +9,22 @@
 }
 
 .b-character__card {
-  background-color: rgb(107, 107, 21);
-  height: 200px;
-  display: flex;
-  align-content: flex-start;
-  overflow: hidden;
-  // width: 100%;
-  // height: 100%;
-  cursor: pointer;
+    display: flex;
+    align-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    flex-direction: column;
 }
 
 .b-character__img {
-  height: 20vh;
+    height: 15vh;
+    min-height: 30vh;
+    min-width: 25vh;
 }
 
 .b-character-name {
-  text-align: center;
+  padding-bottom: 40px;
+  position: absolute;
 }
 
 .b-father__characters:hover {
@@ -49,4 +49,5 @@
 }
 .b-character-name {
   text-align: center;
+  background-color: red($color: #000000);
 }
