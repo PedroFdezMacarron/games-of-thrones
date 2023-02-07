@@ -30,7 +30,7 @@ export default function House() {
   let fName;
 
   // función para recoger los detalles de la casa y la imagen de otra url
-  const getHouse = async () => {    
+  const getHouse = async () => {   
 
     await axios.get( `https://api.got.show/api/show/houses/${name}`).then((response) => {
         setHouse(response.data[0]);
@@ -44,8 +44,6 @@ export default function House() {
             console.log('res2',res2.data[0].image);
         });
     });
- 
-
   };
 
   // carga datos del detalle
@@ -80,7 +78,7 @@ export default function House() {
 
     //religion
     valores = fData.religion;
-    details = [...details, { title: "siblings", items: [...valores] }];
+    details = [...details, { title: "religions", items: [...valores] }];
 
     // fundation
     let date=fData.createdAt.substring(0 , 10)
@@ -105,16 +103,16 @@ export default function House() {
   };
 
   return (
-    <div className="character">
+    <div className="house">
       <div onClick={previousPage} className="previousPage">
         {t('← return')}
       </div>      
   
-      <img className="character__img" src={logo}  alt={houseData.name} ></img>
+      <img className="house__img" src={logo}  alt={houseData.name} ></img>
 
-      <div className="character__name">{houseData.name}</div>
+      <div className="house__name">{houseData.name}</div>
 
-        <div className="character__details">
+        <div className="house__details">
             {details.length > 0 &&
             details.map((details, index) => (
                 <DetailHouse key={index} details={details} />

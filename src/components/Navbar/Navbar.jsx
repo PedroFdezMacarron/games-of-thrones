@@ -29,7 +29,7 @@ export default function Navbar() {
         className={({ isActive }) =>
           isActive ? "nabvar-links active" : "nabvar-links"
         }
-        to="/chronologic"
+        to="/chronology"
       >
         {t("chronology")}
       </NavLink>
