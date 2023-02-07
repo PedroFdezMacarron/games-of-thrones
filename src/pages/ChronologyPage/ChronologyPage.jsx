@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './ChronologyPage.scss';
 import Chronology from '../../components/Chronology/Chronology';
+import Navbar from '../../components/Navbar/Navbar';
 
 function ChronologyPage() {
   const [characters, setCharacters] = useState([]);
@@ -22,9 +23,12 @@ function ChronologyPage() {
   }, []);
 
   return (
+    <>
       <div className='c-chronology'>
         {characters.length < 1 ? <Loading /> : <Chronology characters={characters.filter(character => character.age.age)}/>}
       </div>
+      <Navbar></Navbar>
+    </>
   )
 }
 
