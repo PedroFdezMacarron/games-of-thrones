@@ -1,14 +1,25 @@
 // @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 
-.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
-    background-color: #FFFFFF;
-    background: rgb(255, 237, 237);
-    color: aqua;
-    width: 4px;
-    height: 30px;
-    overflow:visible;
-}
+.simplebar-track.simplebar-vertical{
+    background-color: #818181;
+    border-radius: 7px;
+   }
 
+//pista recorrido
+.simplebar-track {
+    background: rgb(107, 107, 107);
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;  
+    pointer-events: none;
+    overflow: auto;
+    border-radius: 7px;
+  }
+
+.c-scroll-detail-characters{
+    height: 30vh;
+}
 
 
 .detail{
@@ -23,6 +34,7 @@
     }
 
     &__title{
+        color:#ffffff;
         font-size: 18px;
         font-weight: 50;                      
         margin:0px 60px 0px 60px;
@@ -35,15 +47,7 @@
         padding-bottom: 20px;
       
     }
-    &__items{     
-        border-right: 4px solid  #000000;
-        margin-right: 5px;             
-    }
-    &__items:hover{
-        border-right: 4px solid  #727171;
-        margin-right: 5px;        
-     
-    }
+
     &__item{    
         padding-bottom: 10px;
         text-align: center;                

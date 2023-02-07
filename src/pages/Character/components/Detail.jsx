@@ -16,11 +16,9 @@ export default function Detail({details,logo}) {   // hace destructuring {detail
 // ir al personaje del padre
 const goToFather = (urlFather,origin)=>{
     if(origin==='father' || origin==='siblings'){
-      // navigate(urlFather, true  );
-      // navigate(urlFather, { replace: true });
-      // window.location.reload(false);
-      window.location.href = urlFather;
-      // window.location.replace(urlFather);
+  
+      navigate(urlFather, { replace: true });
+
     }
 }
 
@@ -32,7 +30,7 @@ const goToFather = (urlFather,origin)=>{
       <div className="detail__title">{t(details.title)}</div>      
 
 
-      <SimpleBar style={{ height: '30vh' , colorbar:'#FFFF' }}>  
+      <SimpleBar      style={{ height: '30vh'  }}>  
 
           {details.title==="house" &&  <img className='detail__img' src={logo} alt ='alt' />}  
 

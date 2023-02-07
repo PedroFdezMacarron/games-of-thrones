@@ -31,7 +31,7 @@ export default function House() {
 
   // función para recoger los detalles de la casa y la imagen de otra url
   const getHouse = async () => {   
-
+    try {   
     await axios.get( `https://api.got.show/api/show/houses/${name}`).then((response) => {
         setHouse(response.data[0]);
         setDetails(response.data[0]);
@@ -44,6 +44,12 @@ export default function House() {
             console.log('res2',res2.data[0].image);
         });
     });
+
+  } catch (error) {
+    navigate('/houses');
+  }  
+
+
   };
 
   // carga datos del detalle
