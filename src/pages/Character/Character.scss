@@ -2,8 +2,7 @@
 
 .character {
   width: 100%;
-  height: -webkit-calc(100% - 165px);
-  // height:min-content;
+  height: 85vh;
   color: white;
   background-color: #000000;
   display: flex;
@@ -15,7 +14,8 @@
     height: 290px;
     height: 35vh;
     object-fit: scale-down;
-    padding-top: 60px;
+    padding-top: 0;
+   
   }
 
   &__name {
@@ -31,9 +31,12 @@
   }
 
   &__details{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
+    justify-content: space-evenly;
+    background-color: #000000;
   }
 }
 .previousPage{

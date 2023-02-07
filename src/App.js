@@ -9,12 +9,13 @@ import Characters from './pages/Characters/Characters';
 import Character from './pages/Character/Character';
 import Houses from './pages/Houses/Houses';
 import House from './pages/House/House';
-import Chronologic from './pages/Chronologic/Chronologic';
+
 
 import { MyContext } from './context/MyContext'
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Navbar from "./components/Navbar/Navbar";
+import ChronologyPage from "./pages/ChronologyPage/ChronologyPage";
 
 
 
@@ -49,7 +50,7 @@ function App() {
           <Route path='/character/:name' element={<Character/>}/>
           <Route path='/houses' element={<Houses/>}/>
           <Route path='/house/:name' element={<House/>}/>
-          <Route path='/chronologic' element={<Chronologic/>}/>
+          <Route path='/chronology' element={<ChronologyPage/>}/>
         </Routes>
 
 

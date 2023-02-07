@@ -1,0 +1,102 @@
+.c-chrono {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.c-scroll {
+    width: 70vw;
+    height: 60vh;
+    margin-bottom: 50px;
+}
+
+.c-toggle {
+    background-color: black;
+    color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 40px;
+    border: 4px solid white;
+    cursor: pointer;
+}
+
+.flip {
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+    background-color: white;
+    width: 9px;
+    height: 50px;
+    cursor: pointer;
+}
+.right {
+    border-left-width: 3px;
+    border-left-color: white;
+    border-left-style: solid;
+    margin-left: 408px;
+}
+
+.left {
+    border-right-width: 3px;
+    border-right-color: white;
+    border-right-style: solid;
+    margin-right: 408px;
+}
+
+.chrono {
+    width: 400px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4px;
+    border-top-width: 3px;
+    border-top-color: white;
+    border-top-style: solid;
+    margin-top: 0;
+
+    span {
+        width: 27px;
+        height: 46px;
+        margin: 4px 170px 0px 169px;
+        font-family: Georgia;
+        font-size: 24px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: var(--white);
+    }
+
+    h2 {
+        width: 366px;
+        height: 29px;
+        margin: 0;
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: var(--white);
+    }
+
+    img {
+        margin-top: 5px;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 50px;
+        cursor: pointer;
+        }
+}

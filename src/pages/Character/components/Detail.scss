@@ -17,7 +17,8 @@
     background-color: rgb(0, 0, 0);
    
     &__img{
-        height: 30vh;
+        // height: 30vh;
+        width: 196px;
         
     }
 
@@ -59,9 +60,11 @@
         &.father{
             cursor: pointer;   
         } 
+        &.siblings{
+            cursor: pointer;   
+        } 
     }
-    &__house{
-        height: 190px;
+    &__house{       
         height: 30vh;
         object-fit: scale-down;         
         display: block;

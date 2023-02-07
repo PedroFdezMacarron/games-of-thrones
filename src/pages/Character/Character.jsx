@@ -36,7 +36,8 @@ export default function Character() {
       const res = await axios.get(`https://api.got.show/api/show/characters/${name}`);  
       
       const res2 = await axios.get(`https://api.got.show/api/book/houses/${res.data.house}`);  
-      console.log(res2.data[0]);
+
+      
       setLogo(res2.data[0].image);
 
       setCharacter(res.data);

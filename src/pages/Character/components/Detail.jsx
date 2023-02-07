@@ -4,6 +4,7 @@ import 'simplebar-react/dist/simplebar.min.css';
 import "./Detail.scss";
 import { useContext } from 'react';
 import { MyContext } from '../../../context/MyContext';
+import { reloadResources } from 'i18next';
 export default function Detail({details,logo}) {   // hace destructuring {details,logo}
   
   console.log(logo);
@@ -14,8 +15,12 @@ export default function Detail({details,logo}) {   // hace destructuring {detail
 
 // ir al personaje del padre
 const goToFather = (urlFather,origin)=>{
-    if(origin==='father'){
-      navigate(urlFather);
+    if(origin==='father' || origin==='siblings'){
+      // navigate(urlFather, true  );
+      // navigate(urlFather, { replace: true });
+      // window.location.reload(false);
+      window.location.href = urlFather;
+      // window.location.replace(urlFather);
     }
 }
 
@@ -26,14 +31,19 @@ const goToFather = (urlFather,origin)=>{
 
       <div className="detail__title">{t(details.title)}</div>      
 
-          {details.title==="house" &&  <img className='detail__img' src={logo} alt ='alt' />}  
 
       <SimpleBar style={{ height: '30vh' , colorbar:'#FFFF' }}>  
 
+          {details.title==="house" &&  <img className='detail__img' src={logo} alt ='alt' />}  
 
           <div className="detail__items">
+
+
+
             {details.items.map((item, index) => (
+
               <div onClick={() => goToFather(`/character/${item}`,details.title)} className={"detail__item "+details.title}  key={index}> {item} </div>          
+
             ))}
 
           </div>
