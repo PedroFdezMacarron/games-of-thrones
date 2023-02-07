@@ -45,7 +45,7 @@ return (
     <>
         <div className="c-toggle" onClick={toggleOrder}>{characters[0].age.age}</div>
             <img src={flecha} alt="" className={isFlip ? 'flip' : ''} />
-            <SimpleBar autoHide={false} className="c-scroll" style={{ height: '68vh' }}>
+            <SimpleBar autoHide={false} className="c-scroll" style={{ height: '60vh' }}>
         <div className="c-chrono">
             {characters.map((character, index) => (
             <Chrono character={character} index={index} key={character._id} />
