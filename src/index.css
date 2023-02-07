@@ -1,4 +1,4 @@
-/* @import './assets/Game\ of\ Thrones.ttf';  */
+
 @font-face {
   font-family: "JuegoTronos";
   src: url("./assets/Game\ of\ Thrones.ttf");
@@ -13,7 +13,7 @@
   border-radius: 7px;
  }
 
-//pista recorrido
+
 .simplebar-track {
   background: rgb(107, 107, 107);
   z-index: 1;
@@ -29,17 +29,12 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+
   font-family: "JuegoTronos";
 }
 
 code {
-  /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace; */
+
   font-family: "JuegoTronos";
 }
 
