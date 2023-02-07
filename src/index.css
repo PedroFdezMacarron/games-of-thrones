@@ -8,7 +8,22 @@
   src: url("./assets/Lato-Regular.ttf");
 }
 
+.simplebar-track.simplebar-vertical{
+  background-color: #818181;
+  border-radius: 7px;
+ }
 
+//pista recorrido
+.simplebar-track {
+  background: rgb(107, 107, 107);
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;  
+  pointer-events: none;
+  overflow: auto;
+  border-radius: 7px;
+}
 
 body {
   margin: 0;

@@ -55,7 +55,7 @@ export default function Character() {
   useEffect(() => {
     details.length = 0;   
     getCharacter();
-  }, []);
+  }, [name]);
 
   // carga datos del detalle
   const setDetails = (fData) => {

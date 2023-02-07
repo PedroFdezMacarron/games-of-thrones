@@ -13,9 +13,9 @@ export default function Detail({details}) {
     <div className="detail">
       <div className="detail__title">{t(details.title)}</div>      
 
-      <SimpleBar style={{ height: '30vh' , colorbar:'#FFFF' }}>  
+      <SimpleBar style={{ height: '30vh'   }}>  
 
-          <div className="detail__items">
+          <div className="detail__items_house">
             {details.items.map((item, index) => (
               <div className={"detail__item "+details.title}  key={index}> {item} </div>          
             ))}
