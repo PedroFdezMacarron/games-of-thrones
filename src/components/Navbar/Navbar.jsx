@@ -1,16 +1,38 @@
-import './Navbar.scss';
-import { Link } from "react-router-dom";
+import "./Navbar.css";
+import { NavLink } from "react-router-dom";
+import { MyContext } from "../../context/MyContext";
+import { useContext } from "react";
 
 export default function Navbar() {
+  const { t } = useContext(MyContext);
+  return (
+    <div className="nabvar">
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? "nabvar-links active" : "nabvar-links"
+        }
+        to="/characters"
+      >
+        {t("Characters")}
+      </NavLink>
 
-    return(
-        <div className='nabvar'>
-            <Link className='nabvar-links' to="/characters">Personajes</Link>
-            <Link className='nabvar-links' to="/character/Eddard Stark">EDDGARD</Link>
-            <Link className='nabvar-links' to="/houses">Casas</Link>
-            <Link className='nabvar-links' to="/chronologic">Cronologia</Link>
-        </div>
-    )
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? "nabvar-links active" : "nabvar-links"
+        }
+        to="/houses"
+      >
+        {t("Houses")}
+      </NavLink>
 
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? "nabvar-links active" : "nabvar-links"
+        }
+        to="/chronology"
+      >
+        {t("chronology")}
+      </NavLink>
+    </div>
+  );
 }
-

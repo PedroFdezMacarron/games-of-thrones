@@ -1,0 +1,78 @@
+// @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+// .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+//     background-color: #FFFFFF;
+//     background: rgb(255, 237, 237);
+//     color: aqua;
+//     width: 4px;
+//     height: 30px;
+//     overflow:visible;
+// }
+
+
+
+.detail{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+   
+
+    &__title{
+        font-size: 18px;
+        font-weight: 50;                      
+        margin:0px 60px 0px 60px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        padding-bottom: 20px;
+      
+    }
+    &__items_house{     
+        // border-right: 4px solid  #000000;
+        // margin-right: 5px;             
+    }
+
+    &__item{    
+        padding-bottom: 10px;
+        text-align: center;                
+        margin: 1px 0 0;
+        font-family: Lato;
+        font-size: 12px;
+
+        font-weight: 1;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;     
+
+        &.father{
+            cursor: pointer;   
+        } 
+    }
+    &__house{
+        height: 190px;
+        height: 30vh;
+        object-fit: scale-down;         
+        display: block;
+        margin: 0 auto;
+    }
+    &__allegiances{
+        display: none;
+    }
+    &__appearances{
+        display: none;
+    }
+    &__father{
+        display: none;
+    }
+    &__siblings{
+        display: none;
+    }
+    &__titles{
+        display: none;
+    }
+
+}

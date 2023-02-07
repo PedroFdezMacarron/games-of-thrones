@@ -1,32 +1,55 @@
+
+
 .character {
   width: 100%;
-  min-height: 100vh;
-  height:min-content;
+  height: 85vh;
   color: white;
   background-color: #000000;
-  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
   &__img {
-    width: 248px;
-    height: 320px;
+    // width: 228px;
+    height: 290px;
+    height: 35vh;
     object-fit: scale-down;
+    padding-top: 0;
+   
   }
+
   &__name {
-    margin-top: 30px;
-    margin-bottom: 52px;
-    font-size: 36px;
+ 
+    padding-top: 20px;
+    padding-bottom: 32px;
+    font-size: 30px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
   }
+
   &__details{
+    width: 100%;
     display: flex;
-    padding-left: 156;
-    padding-right: 156;
+    flex-wrap: wrap;
     align-content: space-around;
+    justify-content: space-evenly;
+    background-color: #000000;
   }
+}
+.previousPage{
+  font-family: Lato;
+  font-size: 20px;
+  position: absolute;
+  top:20px;
+  left:50px;
+  z-index: 999;
+  cursor: pointer;
+  text-transform:capitalize
+}
+.hidden{
+  font-family: Lato;
+  font-size: 10px;
 }

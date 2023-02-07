@@ -1,0 +1,21 @@
+.b-house__card{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.b-house__name{
+ color: #fff;
+ font-size: 15px;
+}
+
+
+
+.b-house__image{
+    // object-fit: contain;
+    height: 20vh;
+    // width: 310px;
+}
+

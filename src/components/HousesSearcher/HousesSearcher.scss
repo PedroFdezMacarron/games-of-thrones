@@ -1,0 +1,18 @@
+.searcher__container {
+    position: absolute;
+    left: 50px;
+    top: 30px;
+  }
+  .searcher__container .b-searcher__houses {
+    color: #fff;
+    background-color: #000;
+    outline: none;
+    border: none;
+    border-bottom: solid 2px #fff;
+    padding: 5px 30px;
+    width: 500px;
+  
+    background-image:url(../../../public/search.svg);
+    background-repeat: no-repeat;
+    font-size:17px;
+  }

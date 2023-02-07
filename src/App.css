@@ -3,14 +3,19 @@
   src: url('./assets/Game\ of\ Thrones.ttf');
 }
 
+
 .home{
   background-image: url(./assets/BackHomeImg.png);
-  min-height: 100vh;
+  height: 100vh;
   color: white;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
 }
 
 .others{
   background-color: black;
-  min-height: 100vh;
   color: white;
 }

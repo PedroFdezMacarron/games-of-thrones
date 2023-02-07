@@ -1,68 +1,121 @@
 import axios from "axios";
 import "./Character.scss";
-import { Link, useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
 import Detail from "./components/Detail";
-const detailsTitle=["casa","alianzas","apariciones","padre","descendientes","titulos"];
+import { MyContext } from "../../context/MyContext";
 
-let details=[{
-  title:"casa",
-  img:"https://vignette.wikia.nocookie.net/gameofthrones/images/7/7b/House-Forrester-Main-Shield.PNG/revision/latest/scale-to-width-down/350?cb=20161231145807",
-  items:[],
-}];
-let fValores=[];
 
-export default function Character() {
-  const name = useParams().name;
+let details = [
+  {
+    title: "",
+    img: "",
+    items: [],
+  },
+];
 
-  console.log(name);
 
-  // variable de estado
+export default function Character() {  
+  const name = useParams().name;  
+  console.log('entra en character'); 
+  const navigate = useNavigate();
+  const {t} = useContext(MyContext);
+
+
+
+  // variable de estado  
+  const [logo, setLogo] = useState("");  
   const [character, setCharacter] = useState({});
+  
 
-  const getCharacter = async () => {
-    const res = await axios.get(`https://api.got.show/api/show/characters/${name}`);
-    console.log(res.data);
-    setCharacter(res.data);
-    setDetails(res.data);
-    console.log("detalles",details);
+  // función para recoger los detalles del personaje
+  // tiene que traer el escudo de otra url que le pasa el nombre de la casa
+  const getCharacter = async () => {    
+    try {    
+
+      const res = await axios.get(`https://api.got.show/api/show/characters/${name}`);  
+      
+      const res2 = await axios.get(`https://api.got.show/api/book/houses/${res.data.house}`);  
+
+      
+      setLogo(res2.data[0].image);
+
+      setCharacter(res.data);
+      setDetails(res.data);      
+      
+      
+      } catch (error) {
+          navigate('/characters');
+        }  
+        
+  };
+  
+  
+  
+  useEffect(() => {
+    details.length = 0;   
+    getCharacter();
+  }, [name]);
+
+  // carga datos del detalle
+  const setDetails = (fData) => {
+    details.length = 0;
+    let valores = [];    
+
+    // casa
+    valores = [];
+    details = [...details, { title: "house", img: "" , items: [...valores] }, ];
+
+    // allegiances
+    valores = fData.allegiances;
+    details = [
+      ...details,
+      { title: "allegiances", img: "noimage", items: [...valores] },
+    ];
+
+    // appearances
+    valores = fData.appearances;
+    details = [
+      ...details,
+      { title: "appearances", img: "noimage", items: [...valores] },
+    ];
+
+    // father
+    valores = [fData.father];
+    details = [...details, { title: "father", img: "noimage", items: [...valores] }];
+
+    //siblings
+    valores = fData.siblings;
+    details = [...details, { title: "siblings", img: "noimage", items: [...valores] }];
+
+    // titles
+    valores = fData.titles;
+    details = [...details, { title: "titles", img: "noimage", items: [...valores] }];
   };
 
-  const setDetails=(fData)=>{
-    // titulos
-    console.log(fData.titles);
-    let valores=fData.titles;
-    fValores = [...valores];
-
-    details = [...details,{title:'Titulos',img:"",items:[...valores]}]; 
-    // this.details = [...this.details,{title:'Titulos',img:"",items:[...valores]}];    
-  }
-
-  useEffect(() => {
-    getCharacter();
-  }, []);
+  const previousPage = () => { 
+    navigate(-1);
+  };
 
   return (
     <div className="character">
-    
-      <div className="character__name">        
-        {character.actor}
+      <div onClick={previousPage} className="previousPage">
+        {t('← return')}
       </div>
+     
 
-      <div className="character__img">
-        <img
-          className="character__img"
-          src={character.image}
-          alt={character.name}
-        ></img>
+
+      <img
+        className="character__img"
+        src={character.image}
+        alt=""
+      ></img>
+
+      <div className="character__name">{character.name}</div> 
+
+      <div className="character__details">
+        {details.length > 0 &&  details.map((details, index) => (<Detail key={index} details={details} logo={logo} />))}
       </div>
-      <div className="character__name">
-        {character.name}
-      </div>
-      <div className="character__details">    
-        {detailsTitle.map((title,index) => <Detail key={index} titleX={title} />)}
-      </div>
-      
     </div>
   );
 }

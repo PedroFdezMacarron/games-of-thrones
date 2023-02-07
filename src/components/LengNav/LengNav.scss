@@ -15,21 +15,24 @@
    
 }
 
-.manofija{
-    
-    position: fixed;
-    height: 56px;
-    width: 56px;
-    box-shadow: 0 0 8px 4px rgb(0 0 0 / 50%);
-    right: 12px;
-    bottom: 12px;
-    border: none;
-    background-color: $bg-color-fondo;
-    border-radius: 10px;
 
-    &-dentro{
-        text-align: center;
-        font-size: 40px;
-    }
 
+.languages{
+    display: flex;
+    justify-content: flex-end;
+    // padding: 20px 100px;
+    align-items: center;
+    height: 15vh;
 }
+
+.leng{
+    margin: 20px;
+    width: 40px;
+    padding-right: 60px;
+}
+
+.spain{
+    margin: 20px;
+    width: 40px;
+}
+

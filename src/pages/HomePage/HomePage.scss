@@ -1,29 +1,20 @@
-.background{
-    // background-image: url(../../assets/BackHomeImg.png);
-    font-family: 'JuegoTronos'; 
-    min-height: 100vh;
-    background-position:center;
-    background-repeat:no-repeat;
+.background {
+    font-family: "JuegoTronos";
+    /* height: 500px; */
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.title{
-    font-family: "JuegoTronos";
-    font-size: 130px;
-    display: flex;
-    width: 70%;
     justify-content: center;
+  }
+  
+  .games-title {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .Games-of-Thrones {
     color: white;
-}
-
-
-.Games-of-Thrones{
-    color: white;
-}
+    font-size: 150px;
+  }
