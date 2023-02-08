@@ -100,7 +100,7 @@ export default function Character() {
   return (
     <div className="character">
       <div onClick={previousPage} className="previousPage">
-        {t('← return')}
+        {t('← back')}
       </div>
      
 

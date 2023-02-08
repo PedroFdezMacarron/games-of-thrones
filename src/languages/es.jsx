@@ -9,7 +9,7 @@ export const es = {
     "words":"lema",
     "seat":"sede",
     "region":"región",
-    "allegiance":"alianzas",
+    "allegiances":"alianzas",
     "religions":"religiones",
     "fundation":"fundación",
     "house":"casa",
@@ -18,5 +18,6 @@ export const es = {
     "siblings":"hermanos", 
     "titles":"títulos",
     "← return":"← volver",
+    "← back":"← volver",
     "Search...":"Buscar..."
 }

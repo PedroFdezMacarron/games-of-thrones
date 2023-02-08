@@ -9,7 +9,7 @@ export const en = {
     "words":"words",
     "seat":"seat",
     "region":"region",
-    "allegiance":"allegiance",
+    "allegiances":"allegiances",
     "religions":"religions",
     "fundation":"fundation",
     "house":"house",
@@ -18,6 +18,7 @@ export const en = {
     "siblings":"siblings",
     "titles":"titles",
     "← return":"← return",
+    "← back":"← back",
     "Search...":"Search..."
 
 }

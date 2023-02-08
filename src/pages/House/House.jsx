@@ -111,7 +111,7 @@ export default function House() {
   return (
     <div className="house">
       <div onClick={previousPage} className="previousPage">
-        {t('← return')}
+        {t('← back')}
       </div>      
   
       <img className="house__img" src={logo}  alt={houseData.name} ></img>
