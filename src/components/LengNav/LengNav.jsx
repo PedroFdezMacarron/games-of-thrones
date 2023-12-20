@@ -6,9 +6,9 @@ import english from "./english.svg";
 import spanish from "./spain.svg";
 import house from "./Group.png";
 
-const LengNav = () => {
+const LengNav = (coches) => {
   const { changeLanguaje, location } = useContext(MyContext);
-  let coches="" ;
+ 
   function CargaDatos(coches) {
     var lcoches = JSON.parse(coches);
     console.log(lcoches);
@@ -49,6 +49,7 @@ const LengNav = () => {
   }
   CargaDatos(coches);
   return (
+
     // <div className="languages">
     //   <div className="logo-home">
     //     {location.pathname !== "/" && <Link className="leng-home" to="/"><img src ={house} alt="home" /></Link>}
@@ -59,6 +60,7 @@ const LengNav = () => {
     //   <div className="leng" onClick={() => changeLanguaje('en')}><img  type="english" src ={english} alt="english" /></div>
     //   {/* <div className="leng" onClick={() => changeLanguaje('en')}>{t("lang_en")}<img  type="english" img src ='https://cdn.zeplin.io/5e1c73baff24c3be01ba9cca/assets/1a0bc54a-98de-42d0-9e4b-b53645e15eb6.svg' alt="spain" /></div> */}
     // </div>
+    
     <div>
       <h1>Lista de Coches</h1>
       <table>
