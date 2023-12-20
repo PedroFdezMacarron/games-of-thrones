@@ -33,7 +33,9 @@ export default function Character() {
   const getCharacter = async () => {    
     try {    
 
-      const res = await axios.get(`https://api.got.show/api/show/characters/${name}`);  
+      // const res = await axios.get(`https://api.got.show/api/show/characters/${name}`);  
+      const res = await axios.get(`https://thronesapi.com/api/v2/Characters/${name}`);  
+      console.log(res);
       
       const res2 = await axios.get(`https://api.got.show/api/book/houses/${res.data.house}`);  
 

@@ -16,9 +16,13 @@ const CharactersPage = () => {
 
   useEffect(() => {
     const getCharacters = async () => {
+      // const characters = await axios.get(
+      //   "https://api.got.show/api/show/characters/"
+      // );
       const characters = await axios.get(
-        "https://api.got.show/api/show/characters/"
+        "https://thronesapi.com/api/v2/Characters"
       );
+      
       console.log(characters.data);
       setCharacters(characters.data);
       setCharactersView(characters.data);
