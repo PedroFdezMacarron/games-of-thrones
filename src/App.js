@@ -40,9 +40,9 @@ function App() {
     
 
     <MyContext.Provider value={{number, setNumber, number2, setNumber2, t, changeLanguaje, location}}>
-          {/* <div className="goth" >     
+          <div className="goth" >     
                   <LengNav></LengNav>
-          </div>    */}
+          </div>   
           
         <Routes>
           <Route path="/" element={<HomePage></HomePage>}/>
@@ -55,7 +55,7 @@ function App() {
 
 
 
-      {(location.pathname === "/" || location.pathname === "/characters" || location.pathname === "/houses"  || location.pathname === "/chronologic") && <Navbar></Navbar>}
+      {/* {(location.pathname === "/" || location.pathname === "/characters" || location.pathname === "/houses"  || location.pathname === "/chronologic") && <Navbar></Navbar>} */}
       </MyContext.Provider>
     
     </div>
